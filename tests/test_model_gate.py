@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from src.data import get_splits
 from src.train import run_cv, BEST_PARAMS
 
-MIN_F1 = 0.88
+MIN_F1 = 0.99
 MAX_LATENCY_MS = 30
 
 
