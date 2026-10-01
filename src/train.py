@@ -18,6 +18,8 @@ RF_CONFIGS = [
     {"n_estimators": 100, "max_depth": 5},
 ]
 
+BEST_PARAMS = {"n_estimators": 100, "max_depth": None}
+
 GB_CONFIGS = [
     {"n_estimators": 50, "learning_rate": 0.1, "max_depth": 3},
     {"n_estimators": 100, "learning_rate": 0.1, "max_depth": 3},
