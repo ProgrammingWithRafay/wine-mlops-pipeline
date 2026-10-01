@@ -1,4 +1,4 @@
-.PHONY: install lint test train clean
+.PHONY: install lint test train evaluate clean
 
 install:
 	python -m pip install --upgrade pip
@@ -12,6 +12,9 @@ test:
 
 train:
 	python -m src.train
+
+evaluate:
+	python -m src.evaluate
 
 clean:
 	python -c "import pathlib, shutil; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('.').rglob('__pycache__') if '.venv' not in p.parts]; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('.').rglob('.pytest_cache') if '.venv' not in p.parts]; [p.unlink(missing_ok=True) for p in pathlib.Path('.').rglob('*.pyc') if '.venv' not in p.parts]"
